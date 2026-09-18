@@ -1,0 +1,12 @@
+-- Cleaning CID values like replacing - with empty space
+-- Standardizing values for cntry 
+
+insert into silver.erp_loc_a101 (cid,cntry)
+
+select replace(cid,'-',''), 
+case when trim(cntry) in ('US','Unites States','USA') then 'United States'
+	when trim(cntry) = 'DE' then 'Germany'
+	when trim(cntry) = '' or trim(cntry) IS NULL then 'N/A'
+	else trim(cntry) end as cntry
+
+from bronze.erp_loc_a101;
