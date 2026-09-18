@@ -1,6 +1,6 @@
 -- Check for Nulls or Duplicates in Primary Key
 -- Check for unwanted spaces
--- Standardize values for cst_gndr and cst_marital_status
+-- Standardizing values for cst_gndr and cst_marital_status
 -- Expectation: No Result
 
 Insert into silver.crm_cust_info (cst_id, cst_key, cst_firstname, cst_lastname,cst_marital_status,cst_gndr,cst_create_date)
