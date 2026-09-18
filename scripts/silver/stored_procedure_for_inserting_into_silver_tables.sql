@@ -158,6 +158,7 @@ Print '-------------------------------------------------';
 Print '';
 Print '';
 SET @batch_end_time = GETDATE();
+PRINT'Loading Silver Layer is completed';
 PRINT'>> Batch Load Duration: ' + cast(DATEDIFF(second,@batch_start_time,@batch_end_time) as nvarchar) + ' seconds';
 Print '-------------------------------------------------';
 Print '';
