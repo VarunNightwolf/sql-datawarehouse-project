@@ -1,5 +1,5 @@
 if object_id('bronze.crm_cust_info','U') IS NOT NULL DROP TABLE bronze.crm_cust_info;
-create table bronze.crm_cust_info (cst_id int primary key, cst_key nvarchar(25),	cst_firstname nvarchar(55),	cst_lastname nvarchar(55),
+create table bronze.crm_cust_info (cst_id int, cst_key nvarchar(25),	cst_firstname nvarchar(55),	cst_lastname nvarchar(55),
 cst_marital_status nvarchar(5),	cst_gndr nvarchar(5),	cst_create_date date
 );
 
