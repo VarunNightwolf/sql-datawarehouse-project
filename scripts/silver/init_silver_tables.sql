@@ -1,6 +1,6 @@
 if object_id('silver.crm_cust_info','U') IS NOT NULL DROP TABLE silver.crm_cust_info;
 create table silver.crm_cust_info (cst_id int, cst_key nvarchar(25),	cst_firstname nvarchar(55),	cst_lastname nvarchar(55),
-cst_marital_status nvarchar(5),	cst_gndr nvarchar(5),	cst_create_date date, dwh_create_date datetime2 default getdate());
+cst_marital_status nvarchar(55),	cst_gndr nvarchar(55),	cst_create_date date, dwh_create_date datetime2 default getdate());
 
 if object_id('silver.crm_prd_info','U') IS NOT NULL DROP TABLE silver.crm_prd_info;
 create table silver.crm_prd_info (prd_id int,prd_key nvarchar(55),	prd_nm nvarchar(55), prd_cost int,	prd_line nvarchar(55),	prd_start_dt datetime,
