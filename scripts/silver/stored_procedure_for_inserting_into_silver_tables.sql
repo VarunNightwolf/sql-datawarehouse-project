@@ -8,6 +8,10 @@ SET @batch_start_time = GETDATE();
 		Print '              Loading Silver Layer               ';
 		Print '=================================================';
 
+        	Print '-------------------------------------------------';
+		Print '                Loading CRM TABLES               ';
+		Print '-------------------------------------------------';
+
 PRINT'------------------------------------------------';
 SET @start_time = GETDATE();
 PRINT'>> Truncating Data Into: silver.crm_cust_info';
@@ -90,6 +94,9 @@ Print '<----------------  TIME DURATION  -------------->';
 PRINT'>> Load Duration: ' + cast(DATEDIFF(second,@start_time,@end_time) as nvarchar) + ' seconds';
 Print '-------------------------------------------------';
 Print '';
+	Print '-------------------------------------------------';
+		Print '                Loading ERP TABLES               ';
+		Print '-------------------------------------------------';
 Print '';
 PRINT'------------------------------------------------';
   PRINT'------------------------------------------------';
