@@ -1,0 +1,23 @@
+if object_id('bronze.crm_cust_info','U') IS NOT NULL DROP TABLE bronze.crm_cust_info;
+create table bronze.crm_cust_info (cst_id int primary key, cst_key nvarchar(25),	cst_firstname nvarchar(55),	cst_lastname nvarchar(55),
+cst_marital_status nvarchar(5),	cst_gndr nvarchar(5),	cst_create_date date
+);
+
+if object_id('bronze.crm_prd_info','U') IS NOT NULL DROP TABLE bronze.crm_prd_info;
+create table bronze.crm_prd_info (prd_id int,prd_key nvarchar(55),	prd_nm nvarchar(55), prd_cost int,	prd_line nvarchar(55),	prd_start_dt datetime,
+prd_end_dt datetime);
+
+if object_id('bronze.crm_sales_details','U') IS NOT NULL DROP TABLE bronze.crm_sales_details;
+create table bronze.crm_sales_details (sls_ord_num nvarchar(55),sls_prd_key	nvarchar(55), sls_cust_id int,	sls_order_dt int,	sls_ship_dt int,
+sls_due_dt int,	sls_sales int,	sls_quantity int,	sls_price int);
+
+if object_id('bronze.erp_cust_az12','U') IS NOT NULL DROP TABLE bronze.erp_cust_az12;
+create table bronze.erp_cust_az12 (CID nvarchar(55),BDATE date,	GEN nvarchar(55)
+);
+
+if object_id('bronze.erp_loc_a101','U') IS NOT NULL DROP TABLE bronze.erp_loc_a101;
+create table bronze.erp_loc_a101(CID	nvarchar(55), CNTRY nvarchar(55));
+
+if object_id('bronze.erp_px_cat_g1v2','U') IS NOT NULL DROP TABLE bronze.erp_px_cat_g1v2;
+create table bronze.erp_px_cat_g1v2(ID	nvarchar(55), CAT nvarchar(55), SUBCAT nvarchar(55),	MAINTENANCE nvarchar(55));
+
